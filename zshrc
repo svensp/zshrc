@@ -83,7 +83,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 PROMPT=%U%m%u:%~%(!,#,'>')
+
+if [ -f "~/.aliases" ] ; then
 . ~/.aliases
+fi
+
 export EDITOR=vim
 
 bindkey -v
@@ -94,4 +98,6 @@ export GOPATH="/home/sven/workspace/go"
 export PATH="$PATH:$GOPATH/bin"
 export TERM=xterm
 
-source ~/.keys
+if [ -f "~/.keys" ] ; then
+	source ~/.keys
+fi
