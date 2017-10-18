@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/sven/.oh-my-zsh
+  export ZSH=${HOME}/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -84,8 +84,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 PROMPT=%U%m%u:%~%(!,#,'>')
 
-if [ -f "~/.aliases" ] ; then
-. ~/.aliases
+if [ -f "${HOME}/.aliases" ] ; then
+source ${HOME}/.aliases
 fi
 
 export EDITOR=vim
@@ -94,10 +94,10 @@ bindkey -v
 
 bindkey -M viins 'jj' vi-cmd-mode
 
-export GOPATH="/home/sven/workspace/go"
+export GOPATH="${HOME}/workspace/go"
 export PATH="$PATH:$GOPATH/bin"
 export TERM=xterm
 
-if [ -f "~/.keys" ] ; then
-	source ~/.keys
+if [ -f "${HOME}/.keys" ] ; then
+	source ${HOME}/.keys
 fi
